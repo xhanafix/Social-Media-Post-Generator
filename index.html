@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Post Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Social Media Post Generator</h1>
+        
+        <div class="input-section">
+            <div class="form-group">
+                <label for="apiKey">OpenAI API Key:</label>
+                <input type="password" id="apiKey" placeholder="Enter your OpenAI API key">
+            </div>
+
+            <div class="form-group">
+                <label for="product">Product Description:</label>
+                <textarea id="product" placeholder="Describe your product..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Language:</label>
+                <select id="language">
+                    <option value="english">English</option>
+                    <option value="malay">Bahasa Malaysia</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tone:</label>
+                <select id="tone">
+                    <option value="formal">Formal</option>
+                    <option value="casual">Casual</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Content Bucket:</label>
+                <select id="contentBucket">
+                    <option value="education">Education - Tips, How-tos, Facts</option>
+                    <option value="inspiration">Inspiration - Success Stories, Motivation</option>
+                    <option value="personal">Personal - Behind the Scenes, Team Stories</option>
+                    <option value="promotion">Promotion - Products, Services, Offers</option>
+                    <option value="conversational">Conversational - Questions, Polls, Engagement</option>
+                    <option value="entertainment">Entertainment - Fun Facts, Memes, Trends</option>
+                </select>
+            </div>
+
+            <button onclick="generatePosts()">Generate Posts</button>
+        </div>
+
+        <div class="output-section">
+            <div class="platform-output">
+                <h2>Facebook Post</h2>
+                <textarea id="facebookOutput" readonly></textarea>
+                <button onclick="copyText('facebookOutput')">Copy</button>
+            </div>
+
+            <div class="platform-output">
+                <h2>Twitter Post</h2>
+                <textarea id="twitterOutput" readonly></textarea>
+                <button onclick="copyText('twitterOutput')">Copy</button>
+            </div>
+
+            <div class="platform-output">
+                <h2>TikTok Post</h2>
+                <textarea id="tiktokOutput" readonly></textarea>
+                <button onclick="copyText('tiktokOutput')">Copy</button>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2024 Social Media Post Generator. All rights reserved.</p>
+            <p>Created by <a href="https://github.com/xhanafix" target="_blank">xhanafix</a></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
